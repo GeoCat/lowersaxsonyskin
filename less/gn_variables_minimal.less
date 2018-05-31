@@ -1,0 +1,88 @@
+// list of LESS variables to be used in GeoNetwork
+// 
+// this file must be first on the list of @import
+
+// general
+@gn-spacing: 10px;
+
+// body background (image & color)
+// 
+// picture from https://unsplash.com/
+// 
+// when there is an empty string, no background image is used.
+@gn-background-image: '../catalog/views/minimal/images/bg.jpeg';
+@gn-background-color: @body-bg;
+
+// menu bar
+@gn-menubar-background: @navbar-default-bg;
+@gn-menubar-background-active: @navbar-default-link-active-bg;
+@gn-menubar-color: @navbar-default-link-color;
+@gn-menubar-color-hover: @navbar-default-link-hover-color;
+@gn-menubar-border-color: @navbar-default-border;
+@gn-menubar-min-height: 53px;
+// sub bar
+@gn-subbar-height: 52px;
+
+// bottombar
+@gn-bottombar-background: #00274e; // @navbar-default-bg;
+@gn-bottombar-border-color: #e7e7e7; // @navbar-default-border;
+@gn-bottombar-color: #fff; // @navbar-default-link-color;
+@gn-bottombar-color-hover: #fff; // @navbar-default-link-hover-color;
+
+// footer
+@gn-footer-background: #003366; // #e5e5e5;
+@gn-footer-color: #fff; // #999;
+@gn-footer-color-hover: #fff; // #444;
+@gn-footer-min-height: 266px;
+@gn-footer-menubar-min-height: 50px;
+
+// home page
+// 
+// ----- topics block
+@gn-topics-background-color: #d6d6d6; // @well-bg;
+// ----- info block
+@gn-info-background-color: #f1f1f1; // @body-bg;
+// ----- resultcards
+@gn-resultcard-background-color: @body-bg;
+@gn-resultcard-title-background-color: #4a4a4a; // @body-bg;
+@gn-resultcard-title-background-color-hover: #252525; // @gray-light;
+@gn-resultcard-title-color: #fff; // @navbar-default-link-color;
+@gn-resultcard-title-border: 0px solid @navbar-default-border;
+
+// search results page
+@gn-results-background-color: @body-bg;
+
+// metadata page
+@gn-md-view-background-color: @body-bg;
+
+// search
+// 
+// on the search page
+@gn-search-color: #252525;
+@gn-search-background-color: #f1f1f1;
+@gn-search-min-height: 146px;
+
+// styling for the scrollbar
+.scrollbar() {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  // ----- track
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+  }
+  // ----- handle
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #e5e5e5; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  }
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.4); 
+  }
+}

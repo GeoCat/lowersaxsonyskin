@@ -1,0 +1,34 @@
+<ul class="row gn-info-list">
+  <li
+    data-ng-repeat="md in searchResults.records"
+    data-ng-click="openRecord($index, md, searchResults.records)"
+    data-ng-mouseenter="showMore(true)"
+    data-ng-mouseleave="showMore(false)"
+    id="gn-info-list-mw-{{md.getUuid()}}">
+    <section class="resultcard clearfix">
+
+      <div class="title">
+        <h4>{{md.title || md.defaultTitle}}</h4>
+      </div>
+
+      <div class="gn-md-thumbnail">
+        <div class="gn-img-thumbnail"
+             style="background-image: url({{md.getThumbnails().list[0].url}})"
+             data-ng-if="md.getThumbnails().list[0].url">
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="abstract">
+          {{md.abstract}}
+        </div>
+
+        <div class="introduction">
+          <span class="badge" data-ng-repeat="t in md.type">{{t | translate}}
+          </span>
+        </div>
+      </div>
+
+    </section>
+  </li>
+</ul>

@@ -1,0 +1,50 @@
+@import "../../../style/gn_search.less";
+// variables for manipulating the theme
+@import "gn_variables_minimal.less"; // must be last
+
+.gn-full {
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+html, body {
+  height:100%;
+}
+body {
+  padding-top: @gn-subbar-height;
+}
+
+// background image and color
+[ng-app^="gn_search_"] body, [ng-app="gn_login"] body {
+  background-image: url(@gn-background-image); 
+  background-color: @gn-background-color;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container-fluid {
+   margin-right: auto;
+   margin-left: auto;
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.gn-row-main {
+  margin: 5em 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gn-row-info {
+  padding-top: 20px;
+  background-color: @gn-info-background-color;
+}
+
+.cookie-warning {
+  .alert;
+  .alert-info;
+}

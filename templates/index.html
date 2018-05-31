@@ -1,0 +1,32 @@
+<div class="navbar navbar-default gn-top-bar"
+     role="navigation"
+     data-ng-show="gnCfg.mods.header.enabled"
+     data-ng-include="'../../catalog/templates/top-toolbar.html'"
+     xmlns="http://www.w3.org/1999/html">
+</div>
+
+<div class="gn-search-page"
+     data-ng-controller="GnSearchController">
+  <cookiewarning></cookiewarning>
+  <div class=""
+       data-ng-controller="gnsMinimal">
+    <gn-extend-mainctrl></gn-extend-mainctrl>
+
+    <div data-gn-saved-selections="">
+      <div data-ng-include="'../../catalog/views/minimal/templates/home.html'"
+           data-ng-show="activeTab == '/home'"/>
+      <div data-ng-include="'../../catalog/views/minimal/templates/results.html'"
+           data-ng-show="activeTab == '/search'"/>
+      <div data-ng-if="isMapViewerEnabled"
+           data-ng-include="'../../catalog/views/minimal/templates/map.html'"
+           data-ng-show="activeTab == '/map'"/>
+      <div data-ng-include="'../../catalog/views/minimal/templates/recordView.html'"
+           data-ng-show="activeTab == '/metadata'"/>
+    </div>
+  </div>
+</div>
+
+
+<div class="navbar navbar-default gn-bottom-bar" role="navigation"
+     data-ng-include="'../../catalog/views/minimal/templates/footer.html'">
+</div>
