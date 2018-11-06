@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row gn-row-main">
-    <div class="col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2">
 
       <div class="input-group gn-form-any">
         <input type="text"
@@ -14,7 +14,7 @@
                data-typeahead-loading="anyLoading"
                data-typeahead-min-length="1"/>
         <span class="input-group-btn">
-          <a class="btn btn-primary btn-lg"
+          <a class="btn btn-default btn-lg"
              type="button"
              data-ng-href="#/search?any={{homeAnyField}}">
             <i class="fa fa-search"></i>
@@ -91,13 +91,13 @@
                    title="{{facet['@label']}}"
                    data-ng-href="#/search?facet.q=topicCat%2F{{facet['@name']}}">
                   <span class="badge-icon badge-result-topic pull-left">
-                    <i class="fa fa-3x fa-table gn-icon gn-icon-{{facet['@name']}}"></i>
+                    <i class="fa fa-2x fa-table gn-icon gn-icon-{{facet['@name']}}"></i>
                   </span>
                   <span class="badge-text pull-left">
                     <span class="gn-icon-label">{{facet['@label']}}</span>
                   </span>
                 </a>
-                <span class="badge pull-left">{{facet['@count']}}</span>
+                <span class="pull-left">({{facet['@count']}})</span>
               </div>
             </span>
             <span data-ng-repeat="(key, facet) in searchInfo.facet['inspireThemesURI'] track by $index"
@@ -108,13 +108,13 @@
                    title="{{facet['@label']}}"
                    data-ng-href="#/search?facet.q=inspireThemeURI%2F{{facet['@name'] | encodeURIComponent | encodeURIComponent}}">
                   <span class="badge-icon pull-left">
-                     <i class="fa fa-3x gn-icon iti-{{facet['@name'].slice(facet['@name'].lastIndexOf('/')+1)}}"></i>
+                     <i class="fa fa-2x gn-icon iti-{{facet['@name'].slice(facet['@name'].lastIndexOf('/')+1)}}"></i>
                   </span>
                   <span class="badge-text pull-left">
                     <span class="gn-icon-label">{{facet['@label']}}</span>
                   </span>
                 </a>
-                <span class="badge pull-left">{{facet['@count']}}</span>
+                <span class="pull-left">({{facet['@count']}})</span>
               </div>
             </span>
           </div>
@@ -131,13 +131,13 @@
                      class="pull-left clearfix"
                      data-ng-href="#/search?facet.q=type%2F{{facet['@name']}}">
                     <span class="badge-icon pull-left">
-                      <i class="fa fa-3x fa-table gn-icon gn-icon-{{facet['@name']}}"></i>
+                      <i class="fa fa-2x fa-table gn-icon gn-icon-{{facet['@name']}}"></i>
                     </span>
                     <span class="badge-text pull-left">
                       <span class="gn-icon-label">{{facet['@label']}}</span>
                     </span>
                   </a>
-                  <span class="badge pull-left">{{facet['@count']}}</span>
+                  <span class="pull-left">({{facet['@count']}})</span>
                 </div>
               </span>
           </div>

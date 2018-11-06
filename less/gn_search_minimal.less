@@ -112,14 +112,15 @@
 }
 
 // search on home page
-.gn-search-box {
+.gn-row-main {
   .gn-form-any {
-    width: 100%;
-    display: block;
     input.input-lg {
-      border: 0;
+      height: 46px;
       border-radius: 0;
       box-shadow: none;
+    }
+    .btn-default {
+      border-left: 0;
     }
     .dropdown-menu {
       text-align: left;
@@ -141,8 +142,8 @@
 [data-ng-search-form] {
   .gn-top-search {
     border-bottom: 1px solid @panel-default-border;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
     position: relative;
     min-height: @gn-search-min-height;
     [typeahead] {
@@ -173,12 +174,15 @@
         height: 36px;
       }
       button.btn-lg, input[type="text"].input-lg {
-        height: 46px;
+        height: 47px;
         box-shadow: none;
       }
       input[type="text"].input-lg {
-        border-color: #fff;
+        border-color: #ececec;
         border-radius: 0;
+        &:focus {
+          border-color: #66afe9;
+        }
       }
       .btn {
         border-radius: 0;
@@ -190,12 +194,15 @@
         color: #fff;
       }
       .btn-advanced {
-        background: #e5e5e5;
-        border-color: #e5e5e5;
+        background: #ececec;
+        border-color: #ececec;
         font-size: 15px;
         outline: 0;
         height: 47px !important;
       }
+    }
+    .gn-form-advanced {
+      background-color: #ececec;
     }
     .form-group {
       margin: 0;
