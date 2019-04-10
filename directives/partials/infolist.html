@@ -2,19 +2,17 @@
   <li
     data-ng-repeat="md in searchResults.records"
     data-ng-click="openRecord($index, md, searchResults.records)"
-    data-ng-mouseenter="showMore(true)"
-    data-ng-mouseleave="showMore(false)"
     id="gn-info-list-mw-{{md.getUuid()}}">
-    <section class="resultcard clearfix">
+    <section class="resultcard clearfix"
+              data-ng-class="md.getThumbnails().list[0].url ? 'hasThumbnail' : 'noThumbnail'">
 
       <div class="title">
-        <h4>{{md.title || md.defaultTitle}}</h4>
+        <h4>{{md.title || md.defaultTitle}}&nbsp;</h4>
       </div>
 
       <div class="gn-md-thumbnail">
         <div class="gn-img-thumbnail"
-             style="background-image: url({{md.getThumbnails().list[0].url}})"
-             data-ng-if="md.getThumbnails().list[0].url">
+              style="background-image: url({{md.getThumbnails().list[0].url}})">
         </div>
       </div>
 

@@ -22,6 +22,11 @@
 // variables for manipulating the theme
 @import "gn_variables_minimal.less"; // must be last
 
+
+a {
+  color: #255986;
+}
+
 /* Hide the tabset selector because tab
    switch is available in the top tool bar */
 #main-tabset > ul:nth-child(1) {
@@ -52,7 +57,7 @@
   // 
   min-height: calc(~"100vh - @{gn-menubar-min-height} - @{gn-footer-min-height}");
   .search-over {
-    color: #777;
+    color: @gn-menubar-color;
   }
   .badge {
       margin-right: 5px;
@@ -79,14 +84,14 @@
   .gn-status-completed {
     background: #5cb85c;
     border-color: #5cb85c;
-    color: #fff;
+    color: #000;
   }
   .gn-status-mdview {
     font-size: 100%;
     position: relative;
     top: auto;
     left: auto;
-    margin: 0;
+    margin: 10px 0 0 0;
     z-index: 10;
     width: auto;
     text-align: center;

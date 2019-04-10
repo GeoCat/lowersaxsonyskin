@@ -12,15 +12,16 @@
       <a data-ng-if="md.groupWebsite"
          href="{{md.groupWebsite}}" target="_blank">
         <img data-ng-src="{{gnUrl}}..{{md.logo}}"
+             alt="{{'siteLogo' | translate}}"
              class="gn-source-logo"/>
       </a>
       <img data-ng-if="!md.groupWebsite"
            data-ng-src="{{gnUrl}}..{{md.logo}}"
+           alt="{{'siteLogo' | translate}}"
            class="gn-source-logo"/>
-
-      
     </div>
     <!--end top row-->
+
     <div class="row gn-md-title"
          data-ng-click="openRecord($index, md, searchResults.records)">
       <h3>
@@ -40,6 +41,7 @@
       <div class="gn-md-thumbnail"
             data-ng-class="{'gn-md-no-thumbnail': !md.getThumbnails().list[0].url}">
         <img class="gn-img-thumbnail"
+             alt="{{md.title || md.defaultTitle}}"
              data-ng-src="{{md.getThumbnails().list[0].url}}"
              data-ng-if="md.getThumbnails().list[0].url"/>
 
