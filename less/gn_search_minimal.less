@@ -96,9 +96,23 @@ a {
     width: auto;
     text-align: center;
     transform: rotate(0);
-    padding: 5px 25px;
+    padding: 4px 25px 7px 25px;
     display: inline-block;
-    border-radius: 3px;
+    border-radius: 2px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    &:before {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      content: "\f111";
+      margin-left: -15px;
+      margin-right: 10px;
+      color: #fff;
+      font-size: 12px;
+    }
   }
 }
 .gn-source-logo {

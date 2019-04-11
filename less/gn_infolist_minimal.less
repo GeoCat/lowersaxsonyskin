@@ -5,10 +5,15 @@
   }
 }
 
+.gn-row-topics-info {
+  background-color: @gn-info-background-color;
+  min-height: calc(~"100vh - @{gn-subbar-height} - @{gn-footer-menubar-min-height} - 211px");
+}
+
 .gn-row-info {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: @gn-info-background-color;
+  background-color: transparent;
   .nav-pills {
     text-align: left !important;
     border-bottom: 1px solid #ddd;
