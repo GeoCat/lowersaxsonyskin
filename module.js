@@ -23,7 +23,7 @@
 
 (function() {
 
-  goog.provide('gn_search_minimal');
+  goog.provide('gn_search_niedersachsen');
 
 
 
@@ -33,12 +33,12 @@
   goog.require('gn_related_directive');
   goog.require('gn_search');
   goog.require('gn_gridrelated_directive');
-  goog.require('gn_search_minimal_config');
-  goog.require('gn_search_minimal_directive');
+  goog.require('gn_search_niedersachsen_config');
+  goog.require('gn_search_niedersachsen_directive');
 
-  var module = angular.module('gn_search_minimal',
-      ['gn_search', 'gn_search_minimal_config',
-       'gn_search_minimal_directive', 'gn_related_directive',
+  var module = angular.module('gn_search_niedersachsen',
+      ['gn_search', 'gn_search_niedersachsen_config',
+       'gn_search_niedersachsen_directive', 'gn_related_directive',
        'cookie_warning', 'gn_mdactions_directive', 'gn_gridrelated_directive']);
 
 
@@ -94,7 +94,7 @@
     }]);
 
 
-  module.controller('gnsMinimal', [
+  module.controller('gnsNiedersachsen', [
     '$scope',
     '$location',
     '$filter',

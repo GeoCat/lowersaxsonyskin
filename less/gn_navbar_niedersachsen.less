@@ -1,6 +1,6 @@
 @import "../../../style/gn_bootstrap.less"; // must be first
 // variables for manipulating the theme
-@import "gn_variables_minimal.less"; // must be last
+@import "gn_variables_niedersachsen.less"; // must be last
 
 .navbar {
   margin-bottom: 0;
@@ -32,7 +32,7 @@
   background-color: @gn-menubar-background;
   border-bottom: 1px solid #e5e5e5;
   width: 100%;
-  top: 0;
+  top: @gn-header-height;
   z-index: 100;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
   // layer indicator tooks up room in the menu
@@ -92,7 +92,28 @@
     }
   }
   // small screens
-  @media (max-width: 768px) {
+  @media (max-width: @screen-sm-min) {
     padding: 0;
+  }
+}
+
+[ng-app^="gn_search_"] {
+  .gn-top-bar {
+    // width override
+    @media (min-width: @screen-sm-min) {
+      .container-fluid {
+        width: 750px;
+      }
+    }
+    @media (min-width: @screen-md-min) {
+      .container-fluid {
+          width: 970px;
+      }
+    }
+    @media (min-width: @screen-lg-min) {
+      .container-fluid {
+          width: 1170px;
+      }
+    }
   }
 }

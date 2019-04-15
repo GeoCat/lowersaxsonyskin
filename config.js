@@ -23,12 +23,12 @@
 
 (function() {
 
-  goog.provide('gn_search_minimal_config');
+  goog.provide('gn_search_niedersachsen_config');
 
-  var module = angular.module('gn_search_minimal_config', []);
+  var module = angular.module('gn_search_niedersachsen_config', []);
 
   module.value('gnTplResultlistLinksbtn',
-      '../../catalog/views/minimal/directives/partials/linksbtn.html');
+      '../../catalog/views/niedersachsen/directives/partials/linksbtn.html');
 
   module
       .run([

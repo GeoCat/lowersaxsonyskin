@@ -23,16 +23,16 @@
 
 (function() {
 
-  goog.provide('gn_search_minimal_directive');
+  goog.provide('gn_search_niedersachsen_directive');
 
-  var module = angular.module('gn_search_minimal_directive', []);
+  var module = angular.module('gn_search_niedersachsen_directive', []);
 
   module.directive('gnInfoList', ['gnMdView',
     function(gnMdView) {
       return {
         restrict: 'A',
         replace: true,
-        templateUrl: '../../catalog/views/minimal/directives/' +
+        templateUrl: '../../catalog/views/niedersachsen/directives/' +
             'partials/infolist.html',
         link: function linkFn(scope, element, attr) {
           scope.showMore = function(isDisplay) {
@@ -54,7 +54,7 @@
       return {
         restrict: 'A',
         replace: true,
-        templateUrl: '../../catalog/views/minimal/directives/' +
+        templateUrl: '../../catalog/views/niedersachsen/directives/' +
         'partials/attributetable.html',
         scope: {
           attributeTable: '=gnAttributeTableRenderer'
@@ -91,7 +91,7 @@
       return {
         restrict: 'A',
         replace: true,
-        templateUrl: '../../catalog/views/minimal/directives/' +
+        templateUrl: '../../catalog/views/niedersachsen/directives/' +
             'partials/mdactionmenu.html',
         link: function linkFn(scope, element, attrs) {
           scope.mdService = gnMetadataActions;
@@ -114,7 +114,7 @@
       return {
         restrict: 'A',
         replace: true,
-        templateUrl: '../../catalog/views/minimal/directives/' +
+        templateUrl: '../../catalog/views/niedersachsen/directives/' +
             'partials/periodchooser.html',
         scope: {
           label: '@gnPeriodChooser',
