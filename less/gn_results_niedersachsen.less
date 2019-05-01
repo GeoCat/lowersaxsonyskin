@@ -198,7 +198,6 @@ ul.gn-resultview {
     height: 19.5em;
     padding: 14px 14px 14px 0;
     .gn-md-details {
-      //margin-left: @thumbnail-width;
       color: #6a6a6a;
       max-height: 50px;
       overflow: hidden;
@@ -218,17 +217,20 @@ ul.gn-resultview {
       h3 {
         margin-top: 0px;
         a {
+          display: inline-block !important;
           font-weight: 100;
           line-height: 1.3;
           font-size: 80%;
           color: #333333;
           max-height: 82px;
           text-overflow: ellipsis;
+          border-bottom: 1px solid #ccc;
           overflow: hidden;
           display: block;
         }
         a:hover {
           color: @ns-main-color;
+          border-color: @ns-main-color;
           text-decoration: none;
         }
       }
@@ -252,15 +254,17 @@ ul.gn-resultview {
       }
     }
     .gn-md-abstract {
-      cursor: pointer;
       color: @gray;
       float: left;
       // width = 100% - (width thumbnail + margin thumbnail)
       width: calc(~"100% - 160px");
+      .collapse-text-toggle {
+        cursor: pointer;
+        &:hover {
+          color: #333;
+        }
+      }
     }
-    // .gn-md-abstract.ellipsis:after {
-    //   background: none;
-    // }
     .gn-md-keywords {
       .gn-md-keyword {
         text-transform: capitalize;
