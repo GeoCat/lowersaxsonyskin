@@ -228,7 +228,7 @@ ul.gn-resultview {
           display: block;
         }
         a:hover {
-          color: #428bca;
+          color: @ns-main-color;
           text-decoration: none;
         }
       }
@@ -254,9 +254,21 @@ ul.gn-resultview {
     .gn-md-abstract {
       cursor: pointer;
       color: @gray;
+      float: left;
+      // width = 100% - (width thumbnail + margin thumbnail)
+      width: calc(~"100% - 160px");
     }
-    .gn-md-abstract.ellipsis:after {
-      background: none;
+    // .gn-md-abstract.ellipsis:after {
+    //   background: none;
+    // }
+    .gn-md-keywords {
+      .gn-md-keyword {
+        text-transform: capitalize;
+        &:not(:last-child):after {
+          content: ", ";
+        }
+
+      }
     }
     .gn-md-footer {
       .clearfix();
