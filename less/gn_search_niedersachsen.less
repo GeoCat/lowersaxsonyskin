@@ -132,27 +132,54 @@ a {
 
 // search on home page
 .gn-row-main {
+  // .gn-form-any {
+  //   input.input-lg {
+  //     height: 46px;
+  //     border-radius: 0;
+  //     box-shadow: none;
+  //   }
+  //   .btn-default {
+  //     border-left: 0;
+  //   }
+  //   .dropdown-menu {
+  //     text-align: left;
+  //     border: 0;
+  //     margin-top: 0;
+  //     border-radius: 0;
+  //     padding-top: 0;
+  //     li {
+  //       a {
+  //         padding: 8px 18px;
+  //       }
+  //     }
+  //     .scrollbar();
+  //   }
+  // }
   .gn-form-any {
-    input.input-lg {
+    input[type="text"], button {
+      height: 36px;
+    }
+    button.btn-lg, input[type="text"].input-lg {
       height: 46px;
-      border-radius: 0;
-      box-shadow: none;
     }
-    .btn-default {
-      border-left: 0;
-    }
-    .dropdown-menu {
-      text-align: left;
-      border: 0;
-      margin-top: 0;
-      border-radius: 0;
-      padding-top: 0;
-      li {
-        a {
-          padding: 8px 18px;
-        }
+    input[type="text"].input-lg {
+      &:focus {
+        border-color: @gn-search-outline-color;
+        box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset, rgba(@gn-search-outline-color-red, @gn-search-outline-color-green, @gn-search-outline-color-blue, 0.6) 0px 0px 8px;
       }
-      .scrollbar();
+    }
+    button.btn-primary.btn-lg {
+      background-color: @gn-search-button-background-color;
+      border-color: darken(@gn-search-button-background-color, 5%);
+      color: @gn-search-button-color;
+      &:hover {
+        background-color: darken(@gn-search-button-background-color, 10%);
+        border-color: darken(@gn-search-button-background-color, 15%);
+      }
+    }
+    .dropdown-menu > .active > a {
+      background-color: @gn-search-button-background-color;
+      color: @gn-search-button-color;
     }
   }
 }
@@ -200,7 +227,8 @@ a {
         border-color: #ddd;
         border-radius: 0;
         &:focus {
-          border-color: #66afe9;
+          border-color: @gn-search-outline-color;
+          box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset, rgba(@gn-search-outline-color-red, @gn-search-outline-color-green, @gn-search-outline-color-blue, 0.6) 0px 0px 8px;
         }
       }
       .btn {
@@ -259,6 +287,10 @@ a {
       }
       .form-control {
         height: 32px;
+        &:focus {
+          border-color: @gn-search-outline-color;
+          box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset, rgba(@gn-search-outline-color-red, @gn-search-outline-color-green, @gn-search-outline-color-blue, 0.6) 0px 0px 8px;
+        }
       }
     }
   }

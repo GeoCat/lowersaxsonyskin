@@ -7,6 +7,7 @@
 
 // Niedersachsen
 @ns-main-color: #e50046;
+@ns-main-color-blue: #154176;
 
 // override Bootstrap variables
 @gray-light: #707070;
@@ -45,6 +46,14 @@
 
 // home page
 // 
+// ----- search input
+@gn-search-outline-color: @brand-primary;
+@gn-search-button-background-color: @brand-primary;
+@gn-search-button-color: @btn-primary-color;
+
+@gn-search-outline-color-red: red(@gn-search-outline-color);
+@gn-search-outline-color-green: green(@gn-search-outline-color);
+@gn-search-outline-color-blue: blue(@gn-search-outline-color);
 // ----- topics block
 @gn-topics-background-color: #fbfbfbe3;
 @gn-topics-color: #333;
@@ -54,7 +63,7 @@
 // ----- resultcards
 @gn-resultcard-background-color: @body-bg;
 @gn-resultcard-title-background-color: @ns-main-color;
-@gn-resultcard-title-background-color-hover: darken(@ns-main-color, 6.5%);
+@gn-resultcard-title-background-color-hover: darken(@gn-resultcard-title-background-color, 6.5%);
 @gn-resultcard-title-color: #fff;
 @gn-resultcard-title-border: 0px solid @navbar-default-border;
 
